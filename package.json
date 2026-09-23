@@ -1,0 +1,19 @@
+{
+  "name": "atlas-glass-map",
+  "version": "1.0.0",
+  "description": "浮屿 Atlas — 半透明毛玻璃交互地图 Demo",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 0.0.0.0",
+    "build": "vite build",
+    "preview": "vite preview --host 0.0.0.0"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "leaflet": "^1.9.4",
+    "lucide": "^1.47.0",
+    "vite": "^8.3.0"
+  }
+}

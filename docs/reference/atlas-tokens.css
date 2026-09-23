@@ -1,0 +1,96 @@
+/*
+ * Atlas glass design tokens · v1.0 · 2026-09-23
+ * Reference snapshot, not loaded by the current application.
+ * Copy into another project and import before component styles.
+ * Existing material names mirror src/liquid-glass.css.
+ * --atlas-* names package the documented values for reuse.
+ */
+:root {
+  --atlas-font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display',
+    'PingFang SC', 'Noto Sans SC', sans-serif;
+
+  --glass-alpha: .42;
+  --glass-blur: 22px;
+  --material-rgb: 246 250 248;
+  --ink: #193b30;
+  --secondary: #576f63;
+  --green: #247854;
+  --muted: var(--secondary);
+  --surface-edge: rgb(255 255 255 / .68);
+  --surface-shine: rgb(255 255 255 / .4);
+  --surface-shadow: 31 54 43;
+  --surface-highlight: rgb(255 255 255 / .68);
+
+  --atlas-glass-saturation: 1.55;
+  --atlas-glass-readable-alpha: .91;
+  --atlas-glass-fallback-alpha: .96;
+  --atlas-glass-clear-alpha: .28;
+  --atlas-glass-clear-blur: 12px;
+  --atlas-glass-soft-alpha: .42;
+  --atlas-glass-soft-blur: 22px;
+  --atlas-glass-deep-alpha: .72;
+  --atlas-glass-deep-blur: 28px;
+
+  --atlas-radius-panel: 28px;
+  --atlas-radius-row: 18px;
+  --atlas-radius-thumbnail: 12px;
+  --atlas-radius-pill: 999px;
+  --atlas-stroke: 1px;
+  --atlas-panel-gap: 16px;
+  --atlas-primary-button-height: 44px;
+  --atlas-icon-button-size: 44px;
+  --atlas-icon-size: 19px;
+  --atlas-icon-stroke: 1.65;
+
+  /* Default desktop (>1150 and <1600) layout. Apply documented breakpoints separately. */
+  --atlas-page-edge: 24px;
+  --atlas-top-offset: 22px;
+  --atlas-header-height: 64px;
+  --atlas-panel-top: 109px;
+  --atlas-sidebar-left-width: 294px;
+  --atlas-sidebar-right-width: 258px;
+  --atlas-map-tools-width: 52px;
+  --atlas-map-tools-expanded-right: 300px;
+  --atlas-dock-bottom: 29px;
+
+  --atlas-shadow-panel:
+    0 12px 32px rgb(var(--surface-shadow) / .1),
+    0 2px 7px rgb(var(--surface-shadow) / .05),
+    inset 0 1px 1px var(--surface-highlight),
+    inset 0 -1px 1px rgb(255 255 255 / .18);
+  --atlas-shadow-control:
+    0 8px 24px rgb(var(--surface-shadow) / .13),
+    inset 0 1.5px 1px var(--surface-highlight),
+    inset 0 -1px 1px rgb(255 255 255 / .24);
+
+  --atlas-duration-feedback: 220ms;
+  --atlas-duration-press: 280ms;
+  --atlas-duration-layout: 300ms;
+  --atlas-ease-layout: cubic-bezier(.2,.8,.2,1);
+  --atlas-ease-press: cubic-bezier(.2,.85,.25,1.2);
+  --atlas-press-scale: .96;
+}
+
+/* Put the theme on the document root or a parent of the glass components. */
+.dark-map,
+[data-atlas-theme='dark'] {
+  --material-rgb: 25 40 47;
+  --ink: #edf7f2;
+  --secondary: #c0d2ca;
+  --green: #86d7af;
+  --surface-edge: rgb(227 250 244 / .24);
+  --surface-shine: rgb(201 230 247 / .1);
+  --surface-shadow: 0 10 19;
+  --surface-highlight: rgb(222 248 245 / .26);
+  /* Recompute derived custom properties in the theme scope. */
+  --muted: var(--secondary);
+  --atlas-shadow-panel:
+    0 12px 32px rgb(var(--surface-shadow) / .1),
+    0 2px 7px rgb(var(--surface-shadow) / .05),
+    inset 0 1px 1px var(--surface-highlight),
+    inset 0 -1px 1px rgb(255 255 255 / .18);
+  --atlas-shadow-control:
+    0 8px 24px rgb(var(--surface-shadow) / .13),
+    inset 0 1.5px 1px var(--surface-highlight),
+    inset 0 -1px 1px rgb(255 255 255 / .24);
+}
